@@ -78,13 +78,19 @@ $light-blue: #1998d6;
   width: 50%;
   height: 50%;
   margin: 10px;
+  opacity: 0.6;
+  &:hover {
+    p {
+      opacity: 1;
+      transition: all 500ms;
+    }
+  }
   &__img {
     width: 100%;
     height: 100%;
-    opacity: 0.6;
   }
   &img__leader {
-    opacity: 0;
+    opacity: 1;
     transition: all 500ms;
     width: 50%;
   }
@@ -102,7 +108,7 @@ $light-blue: #1998d6;
   opacity: 1;
 }
 .scrolled.slide-right {
-  animation: slide-in-right 1s ease-in-out both;
+  animation: slide-in-right 0.7s ease-in-out both;
 }
 
 @keyframes slide-in-right {
@@ -114,4 +120,13 @@ $light-blue: #1998d6;
     transform: translateX(0);
     opacity: 1;
   }
+}
+
+.author {
+  text-align: center;
+  font-family: $font;
+  color: $light-grey;
+  background-image: url("../images/paw-dark-blue.png");
+  background-repeat: repeat;
+  background-position: center bottom;
 }
