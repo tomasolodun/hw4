@@ -37,6 +37,12 @@ $light-blue: #1998d6;
   }
 }
 
+.flying_skye {
+  position: fixed;
+  width: 10%;
+  bottom: 10px;
+  right: 10px;
+}
 .greeting {
   background-color: $light-blue;
   display: flex;
@@ -45,6 +51,9 @@ $light-blue: #1998d6;
     font-family: $font;
     color: $light-grey;
     text-align: center;
+    position: sticky;
+    margin-top: 20px;
+    top: 20px;
   }
   &__team {
     filter: drop-shadow(-5px 5px 50px $light-grey);

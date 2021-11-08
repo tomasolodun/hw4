@@ -1,5 +1,6 @@
 const scrollElementRight = document.querySelectorAll(".friend__img__leader");
-let greeting = document.querySelector(".greeting__team");
+let greetingTeam = document.querySelector(".greeting__team");
+let greetingWords = document.querySelector(".greeting__words");
 let description = document.querySelector(".description p");
 let friends = document.querySelectorAll(".friend");
 
@@ -44,27 +45,28 @@ const partlyOpacity = (element, radius) => {
     document.documentElement.scrollTop ||
     document.body.scrollTop ||
     0;
-    element.style.opacity = Math.max(0, Math.min(1, -scroll / radius + 2));
+  element.style.opacity = Math.max(0, Math.min(1, -scroll / radius + 2));
 };
 
 const itemOnHover = (elements) => {
-    elements.forEach((element) => {
-        element.addEventListener("mouseenter", () => {
-            element.style.opacity = 1;
-            element.style.cursor = "pointer";
-            element.style.transform = "scale(1.2)";
-            element.style.transition = "all 500ms";
-      });
-      element.addEventListener("mouseleave", () => {
-        element.style.opacity = 0.6;
-        element.style.transform = "scale(1)";
-      });
+  elements.forEach((element) => {
+    element.addEventListener("mouseenter", () => {
+      element.style.opacity = 1;
+      element.style.cursor = "pointer";
+      element.style.transform = "scale(1.2)";
+      element.style.transition = "all 500ms";
+    });
+    element.addEventListener("mouseleave", () => {
+      element.style.opacity = 0.6;
+      element.style.transform = "scale(1)";
+    });
   });
 };
 
 window.addEventListener("scroll", () => {
   handleScrollAnimation(scrollElementRight);
-  partlyOpacity(greeting, 250);
-  partlyOpacity(description, 600);
   itemOnHover(friends);
+  partlyOpacity(greetingTeam, 250);
+  partlyOpacity(description, 600);
+  partlyOpacity(greetingWords, 150);
 });

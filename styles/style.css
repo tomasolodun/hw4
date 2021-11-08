@@ -37,6 +37,13 @@
   transition: all 0.5s;
 }
 
+.flying_skye {
+  position: fixed;
+  width: 10%;
+  bottom: 10px;
+  right: 10px;
+}
+
 .greeting {
   background-color: #1998d6;
   display: -webkit-box;
@@ -51,6 +58,10 @@
   font-family: Poppins, sans-serif;
   color: #f0f2f3;
   text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  margin-top: 20px;
+  top: 20px;
 }
 .greeting__team {
   -webkit-filter: drop-shadow(-5px 5px 50px #f0f2f3);
